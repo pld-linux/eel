@@ -42,7 +42,7 @@ Requires:	%{name} = %{version}
 This package provides the necessary development libraries and include
 files to allow you to develop with Eel.
 
-%description -l pl devel
+%description devel -l pl
 Ten pakiet zawiera biblioteki oraz pliki nag³ówkowe niezbêdne do
 tworzenia oprogramowania z wykorzystaniem Eel.
 
@@ -55,7 +55,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static eel libraries.
 
-%description -l pl static
+%description static -l pl
 Biblioteki statyczne eel.
 
 %prep
