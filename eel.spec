@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.8.1
+Version:	2.8.2
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	3eee928ab6a2c015a14104e653f93a99
+# Source0-md5:	4d0beb2f0ad4c304b49c06b08d0a03e5
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,7 +15,7 @@ BuildRequires:	GConf2-devel >= 2.7.92
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.8.2
+BuildRequires:	gnome-vfs2-devel >= 2.8.3
 BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.16
@@ -28,6 +28,7 @@ BuildRequires:	libxml2-devel >= 2.6.6
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
+Requires:	gnome-vfs2 >= 2.8.3
 Requires:	libgnomeui >= 2.7.92
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,6 +45,7 @@ Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.6.0
+Requires:	gnome-vfs2-devel >= 2.8.2
 Requires:	libgnomeui-devel >= 2.7.91
 
 %description devel
