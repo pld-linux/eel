@@ -1,29 +1,29 @@
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
-Version:	1.0.2
+Version:	2.1.1
 Release:	2
 License:	GPL
 Group:		X11/Libraries
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.bz2
-Patch0:		%{name}-font-dir.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.1/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf-devel >= 0.12
-BuildRequires:	freetype-devel >= 2.0.1
-BuildRequires:	gdk-pixbuf-devel >= 0.10.0
-BuildRequires:	gettext-devel
-BuildRequires:	gnome-libs-devel >= 1.2.11
-BuildRequires:	gnome-vfs-devel >= 1.0
-BuildRequires:	gtk+-devel >= 1.2.9
-BuildRequires:	intltool
+BuildRequires:	GConf2-devel >= 1.2.1
+BuildRequires:	freetype-devel >= 2.0.9
+BuildRequires:	gail-devel >= 0.17
+BuildRequires:	gnome-vfs2-devel >= 2.0.4
+BuildRequires:	gtk+2-devel >= 2.0.6
+BuildRequires:	intltool >= 0.22
+BuildRequires:	libgnome-devel >= 2.0.5
+BuildRequires:	libgnomeui-devel >= 2.0.5
+BuildRequires:	libgnomecanvas-devel >= 2.0.4
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 1.0.0
-BuildRequires:	libxml-devel >= 1.8.10
-BuildRequires:	oaf-devel >= 0.6.5
+BuildRequires:	librsvg-devel >= 2.1.0
+BuildRequires:	libxml2-devel >= 2.4.24
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-%define		_sysconfdir	/etc
+%define		_mandir		%{_prefix}/man
 
 %description
 Eazel Extensions Library is a collection of widgets and extensions to
@@ -37,6 +37,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gail-devel >= 0.17
 
 %description devel
 This package provides the necessary development libraries and include
@@ -60,10 +61,9 @@ Biblioteki statyczne eel.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%configure2_13 \
+%configure \
 	--disable-gtktest \
 	--enable-static
 %{__make}
@@ -71,13 +71,12 @@ Biblioteki statyczne eel.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	 DESTDIR=$RPM_BUILD_ROOT \
+	 pkgconfigdir=%{_pkgconfigdir}
 
-mkdir $RPM_BUILD_ROOT%{_includedir}/eel
-cp $RPM_BUILD_ROOT%{_includedir}/eel-1/eel/*.h $RPM_BUILD_ROOT%{_includedir}/eel/
-rm -rf $RPM_BUILD_ROOT%{_includedir}/eel-1
 
-%find_lang %{name}
+%find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -87,16 +86,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/eel-config
-%{_includedir}/eel
-%attr(755,root,root) %{_libdir}/lib*.la
+%doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/*.sh
+%attr(755,root,root) %{_libdir}/lib*.la
+%{_includedir}/eel-2
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
