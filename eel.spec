@@ -22,6 +22,7 @@ BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 2.4.0
 BuildRequires:	libxml2-devel >= 2.5.10
+BuildRequires:	pkgconfig
 Requires:	libgnomeui >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,6 +39,7 @@ Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	gail-devel >= 1.4.0
+Requires:	libgnomeui-devel >= 2.4.0
 
 %description devel
 This package provides the necessary development libraries and include
@@ -86,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so.*.*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
