@@ -1,7 +1,7 @@
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
-Version:	2.2.0.1
+Version:	2.2.0.2
 Release:	1
 License:	GPL
 Group:		X11/Libraries
