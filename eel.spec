@@ -37,6 +37,7 @@ Summary:	Libraries and include files for developing with Eel.
 Summary(pl):	Biblioteki i nag³ówki potrzebne do developing'u z u¿yciem Eel.
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gail-devel >= 0.17
 
 %description devel
 This package provides the necessary development libraries and include
