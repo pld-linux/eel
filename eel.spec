@@ -2,19 +2,19 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.4.1
-Release:	1
+Version:	2.5.0
+Release:	0.1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	5ddfee20c3ad53ebbbb8c8e9517e8304
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	665a9d18e19a02a65b22c38bebdbc783
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.3
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.4.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-vfs2-devel >= 2.4.0
-BuildRequires:	gtk+2-devel >= 2.2.3
+BuildRequires:	gtk+2-devel >= 2.3.0
 BuildRequires:	intltool >= 0.27.2
 BuildRequires:	libgnome-devel >= 2.4.0
 BuildRequires:	libgnomecanvas-devel >= 2.4.0
