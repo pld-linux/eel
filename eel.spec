@@ -1,14 +1,10 @@
 # Note that this is NOT a relocatable package
-%define RELEASE		0_cvs_0
-%define rel		%{?CUSTOM_RELEASE} %{!?CUSTOM_RELEASE:%RELEASE}
-%define prefix		/usr
-%define sysconfdir	/etc
 
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
-Name:		name
-Version:	1.0
-Release:	%rel
+Name:		eel
+Version:	1.0.1
+Release:	1
 Vendor:		GNOME
 License:	GPL
 Group:		Libraries
@@ -16,7 +12,7 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	%{%{name}}-%{ver}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.gz
 URL:		http://nautilus.eazel.com/
 BuildRequires:	glib-devel >= 1.2.9
 BuildRequires:	gtk+-devel >= 1.2.9
@@ -30,6 +26,9 @@ BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1.0.0
 Requires:	freetype >= 2.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define _prefix		/usr
+%define _sysconfdir	/etc
 
 %description
 Eazel Extensions Library
@@ -61,10 +60,11 @@ export LC_ALL LINGUAS LANG
 
 ## Warning!  Make sure there are no spaces or tabs after the \ 
 ## continuation character, or else the rpm demons will eat you.
-CFLAGS="$RPM_OPT_FLAGS" 
+CFLAGS="$RPM_OPT_FLAGS"
+
 %configure $MYARCH_FLAGS \
-	--prefix=%{prefix} \
-	--sysconfdir=%{sysconfdir}
+	--prefix=%{_prefix} \
+	--sysconfdir=%{_sysconfdir}
 
 make -k
 make check
