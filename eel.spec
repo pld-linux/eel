@@ -1,38 +1,35 @@
-# Note that this is NOT a relocatable package
-
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
 Version:	1.0.1
-Release:	1
-Vendor:		GNOME
+Release:	4
 License:	GPL
-Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
+Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
+Group(fr):	X11/Librairies
+Group(pl):	X11/Biblioteki
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
-BuildRequires:	glib-devel >= 1.2.9
+BuildRequires:	GConf-devel >= 0.12
+BuildRequires:	freetype-devel >= 2.0.1
+BuildRequires:	gdk-pixbuf-devel >= 0.10.0
+BuildRequires:	gnome-libs-devel >= 1.2.11
+BuildRequires:	gnome-vfs-devel >= 1.0
 BuildRequires:	gtk+-devel >= 1.2.9
 BuildRequires:	libxml-devel >= 1.8.10
-BuildRequires:	gnome-libs-devel >= 1.2.11
-BuildRequires:	GConf-devel >= 0.12
-BuildRequires:	oaf-devel >= 0.6.5
-BuildRequires:	gnome-vfs-devel >= 1.0
-BuildRequires:	gdk-pixbuf-devel >= 0.10.0
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1.0.0
+BuildRequires:	oaf-devel >= 0.6.5
 BuildRequires:	xml-i18n-tools
-BuildRequires:	freetype-devel >= 2.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _prefix		/usr/X11R6
-%define _sysconfdir	/etc
+%define		_prefix		/usr/X11R6
+%define		_sysconfdir	/etc
 
 %description
-Eazel Extensions Library
+Eazel Extensions Library is a collection of widgets and extensions to
+many modules of the GNOME platform.
 
 %description -l pl
 Biblioteka rozszerzeñ Eazel
@@ -40,34 +37,41 @@ Biblioteka rozszerzeñ Eazel
 %package devel
 Summary:	Libraries and include files for developing with Eel.
 Summary(pl):	Biblioteki i nag³ówki potrzebne do developing'u z u¿yciem Eel.
-Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Requires:	%name = %{version}
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
+Requires:	%{name} = %{version}
 
 %description devel
 This package provides the necessary development libraries and include
 files to allow you to develop with Eel.
 
 %description -l pl devel
-Ten pakiet zawiera biblioteki oraz pliki nag³ówkowe niezbêdne do tworzenia 
-oprogramowania z wykorzystaniem Eel.
+Ten pakiet zawiera biblioteki oraz pliki nag³ówkowe niezbêdne do
+tworzenia oprogramowania z wykorzystaniem Eel.
+
+%package static
+Summary:	Static eel libraries
+Summary(pl):	Biblioteki statyczne eel
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
+Requires:	%{name}-devel = %{version}
+
+%description static
+Static eel libraries.
+
+%description -l pl static
+Biblioteki statyczne eel.
 
 %prep
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS"
-
 %configure2_13 \
 	--disable-gtktest \
-	--prefix=%{_prefix} \
-	--sysconfdir=%{_sysconfdir} \
-%ifarch alpha
-	--host=alpha-pld-linux
-%endif
-
+	--enable-static
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -76,27 +80,27 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf AUTHORS ChangeLog NEWS
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-/sbin/ldconfig
-
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so*
-%{_datadir}/eel/fonts/urw/*.dir
-%{_datadir}/eel/fonts/urw/*.pfb
-%{_datadir}/eel/fonts/urw/*.afm
-%{_datadir}/eel/fonts/urw/*.pfm
-%doc *.gz
-
+%attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/eel-config
-%dir %{_includedir}/eel/*.h
-%{_libdir}/*.la
-%{_libdir}/*.sh
+%{_includedir}/eel
+%attr(755,root,root) %{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/*.sh
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
