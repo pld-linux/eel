@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeÒ Eazel
 Summary(ko):	Eazel »Æ¿Â ∂Û¿Ã∫Í∑Ø∏Æ
 Name:		eel
-Version:	2.5.91
+Version:	2.5.91.1
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	5c062fe133b6adb90d287d7a732bd2a4
+# Source0-md5:	86ab6f74090181020fd1464c70bab7b1
 Patch0:		%{name}-locale-names.patch
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
