@@ -2,29 +2,34 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.4.2
+Version:	2.6.0
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	230c0fe2d7a756d65b2af6c5accfef88
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	a5e51e028011a7b92ccc30d0a86aa6bb
+Patch0:		%{name}-locale-names.patch
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 2.3.3
+BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	GConf2-devel >= 2.5.90
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.4.0
+BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.4.0
-BuildRequires:	gtk+2-devel >= 2.2.3
-BuildRequires:	intltool >= 0.27.2
-BuildRequires:	libgnome-devel >= 2.4.0
-BuildRequires:	libgnomecanvas-devel >= 2.4.0
-BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	gnome-vfs2-devel >= 2.6.0
+BuildRequires:	gtk+2-devel >= 2:2.4.0
+BuildRequires:	intltool >= 0.29
+BuildRequires:	libart_lgpl-devel >= 2.3.16
+BuildRequires:	libglade2-devel >= 2.3.6
+BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 2.4.0
-BuildRequires:	libxml2-devel >= 2.5.10
+BuildRequires:	librsvg-devel >= 1:2.6.2
+BuildRequires:	libtool
+BuildRequires:	libxml2-devel >= 2.6.6
+BuildRequires:	perl-base
 BuildRequires:	pkgconfig
-Requires:	libgnomeui >= 2.4.0
+BuildRequires:	popt-devel >= 1.5
+Requires:	libgnomeui >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,9 +43,9 @@ Biblioteka rozszerzeñ Eazel.
 Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	gail-devel >= 1.4.0
-Requires:	libgnomeui-devel >= 2.4.0
+Requires:	%{name} = %{version}-%{release}
+Requires:	gail-devel >= 1.6.0
+Requires:	libgnomeui-devel >= 2.6.0
 
 %description devel
 This package provides the necessary development libraries and include
@@ -54,7 +59,7 @@ tworzenia oprogramowania z wykorzystaniem Eel.
 Summary:	Static eel libraries
 Summary(pl):	Biblioteki statyczne eel
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static eel libraries.
@@ -64,9 +69,15 @@ Biblioteki statyczne eel.
 
 %prep
 %setup -q
+%patch0 -p1
+
+mv po/{no,nb}.po
 
 %build
-cp /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--disable-gtktest \
 	--enable-static
