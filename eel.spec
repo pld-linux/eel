@@ -2,7 +2,7 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
 Version:	1.0.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Libraries
 Group(de):	X11/Libraries
@@ -10,6 +10,7 @@ Group(es):	X11/Bibliotecas
 Group(fr):	X11/Librairies
 Group(pl):	X11/Biblioteki
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.bz2
+Patch0:	%{name}-font-dir.patch
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf-devel >= 0.12
 BuildRequires:	freetype-devel >= 2.0.1
@@ -66,6 +67,7 @@ Biblioteki statyczne eel.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_13 \
