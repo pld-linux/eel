@@ -74,10 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-for FILE in "$RPM_BUILD_ROOT/bin/*"; do
-	file "$FILE" | grep -q not\ stripped && strip $FILE
-done
-
 gzip -9nf AUTHORS ChangeLog NEWS
 
 %clean
