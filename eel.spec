@@ -24,6 +24,7 @@ BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Eazel Extensions Library is a collection of widgets and extensions to
@@ -62,7 +63,10 @@ Biblioteki statyczne eel.
 %setup -q
 
 %build
-%configure \
+if [ -f %{_pkgconfigdir}/libpng12.pc ] ; then
+        CPPFLAGS="`pkg-config libpng12 --cflags`"
+fi
+%configure CPPFLAGS="$CPPFLAGS" \
 	--disable-gtktest \
 	--enable-static
 %{__make}
