@@ -2,7 +2,7 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.bz2
@@ -11,15 +11,15 @@ URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf-devel >= 0.12
 BuildRequires:	freetype-devel >= 2.0.1
 BuildRequires:	gdk-pixbuf-devel >= 0.10.0
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.11
 BuildRequires:	gnome-vfs-devel >= 1.0
 BuildRequires:	gtk+-devel >= 1.2.9
-BuildRequires:	libxml-devel >= 1.8.10
+BuildRequires:	intltool
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1.0.0
+BuildRequires:	libxml-devel >= 1.8.10
 BuildRequires:	oaf-devel >= 0.6.5
-BuildRequires:	xml-i18n-tools
-BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -30,11 +30,11 @@ Eazel Extensions Library is a collection of widgets and extensions to
 many modules of the GNOME platform.
 
 %description -l pl
-Biblioteka rozszerzeñ Eazel
+Biblioteka rozszerzeñ Eazel.
 
 %package devel
-Summary:	Libraries and include files for developing with Eel.
-Summary(pl):	Biblioteki i nag³ówki potrzebne do developing'u z u¿yciem Eel.
+Summary:	Libraries and include files for developing with Eel
+Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
@@ -77,8 +77,6 @@ mkdir $RPM_BUILD_ROOT%{_includedir}/eel
 cp $RPM_BUILD_ROOT%{_includedir}/eel-1/eel/*.h $RPM_BUILD_ROOT%{_includedir}/eel/
 rm -rf $RPM_BUILD_ROOT%{_includedir}/eel-1
 
-gzip -9nf AUTHORS ChangeLog NEWS
-
 %find_lang %{name}
 
 %clean
@@ -89,11 +87,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_libdir}/*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
 %attr(755,root,root) %{_bindir}/eel-config
 %{_includedir}/eel
 %attr(755,root,root) %{_libdir}/lib*.la
