@@ -11,16 +11,16 @@ URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.2
 BuildRequires:	freetype-devel >= 2.1.3
 BuildRequires:	gail-devel >= 1.2.0
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-vfs2-devel >= 2.3.2
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	intltool >= 0.25
 BuildRequires:	libgnome-devel >= 2.2.0
-BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libgnomecanvas-devel >= 2.2.0
+BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 2.2.0
 BuildRequires:	libxml2-devel >= 2.5.1
-BuildRequires:	gettext-devel
 Requires:	libgnomeui >= 2.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +36,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	gail-devel >= 0.17
+Requires:	gail-devel >= 1.2.0
 
 %description devel
 This package provides the necessary development libraries and include
