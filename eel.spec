@@ -12,7 +12,7 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/eel/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
 BuildRequires:	glib-devel >= 1.2.9
 BuildRequires:	gtk+-devel >= 1.2.9
@@ -34,26 +34,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Eazel Extensions Library
 
+%description -l pl
+Biblioteka rozszerzeñ Eazel
+
 %package devel
 Summary:	Libraries and include files for developing with Eel.
+Summary(pl):	Biblioteki i nag³ówki potrzebne do developing'u z u¿yciem Eel.
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
-Requires:	%name = %{PACKAGE_VERSION}
+Requires:	%name = %{version}
 
 %description devel
 This package provides the necessary development libraries and include
 files to allow you to develop with Eel.
 
+%description -l pl devel
+Ten pakiet zawiera biblioteki oraz pliki nag³ówkowe niezbêdne do tworzenia 
+oprogramowania z wykorzystaniem Eel.
+
 %prep
 %setup -q
 
 %build
-rm missing
-
 CFLAGS="$RPM_OPT_FLAGS"
-%configure2_13 $MYARCH_FLAGS \
+
+%configure2_13 \
 	--disable-gtktest \
 	--prefix=%{_prefix} \
 	--sysconfdir=%{_sysconfdir} \
