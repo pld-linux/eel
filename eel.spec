@@ -2,7 +2,7 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
 Version:	2.1.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.1/%{name}-%{version}.tar.bz2
@@ -22,9 +22,6 @@ BuildRequires:	libxml2-devel >= 2.4.24
 BuildRequires:	gettext-devel
 Requires:	libgnomeui >= 2.1.1-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Eazel Extensions Library is a collection of widgets and extensions to
