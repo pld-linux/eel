@@ -2,34 +2,36 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.8.2
+Version:	2.9.90
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	4d0beb2f0ad4c304b49c06b08d0a03e5
+Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	58b0e5f7fd9659bd91e663b187ebaffd
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GConf2-devel >= 2.7.92
+BuildRequires:	GConf2-devel >= 2.9.2
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.8.3
-BuildRequires:	gtk+2-devel >= 2:2.4.4
+BuildRequires:	gnome-desktop-devel >= 2.9.90
+Buildrequires:	gnome-menus-devel
+BuildRequires:	gnome-vfs2-devel >= 2.9.90
+BuildRequires:	gtk+2-devel >= 2:2.6.2
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.16
-BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnomeui-devel >= 2.7.92
+BuildRequires:	libglade2-devel >= 1:2.5.0
+BuildRequires:	libgnomeui-devel >= 2.9.1
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 1:2.8.1
+BuildRequires:	librsvg-devel >= 1:2.9.5
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.6.6
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
-Requires:	gnome-vfs2 >= 2.8.3
-Requires:	libgnomeui >= 2.7.92
+Requires:	gnome-vfs2 >= 2.9.90
+Requires:	libgnomeui >= 2.9.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,8 +47,8 @@ Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.6.0
-Requires:	gnome-vfs2-devel >= 2.8.2
-Requires:	libgnomeui-devel >= 2.7.91
+Requires:	gnome-vfs2-devel >= 2.9.90
+Requires:	libgnomeui-devel >= 2.9.1
 
 %description devel
 This package provides the necessary development libraries and include
