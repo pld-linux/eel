@@ -1,7 +1,7 @@
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
-Version:	1.1.14
+Version:	1.1.15
 Release:	1
 License:	GPL
 Group:		X11/Libraries
@@ -62,10 +62,7 @@ Biblioteki statyczne eel.
 %setup -q
 
 %build
-if [ -f %{_pkgconfigdir}/libpng12.pc ] ; then
-        CPPFLAGS="`pkg-config libpng12 --cflags`"
-fi
-%configure CPPFLAGS="$CPPFLAGS" \
+%configure \
 	--disable-gtktest \
 	--enable-static
 %{__make}
@@ -77,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 	 DESTDIR=$RPM_BUILD_ROOT \
 	 pkgconfigdir=%{_pkgconfigdir}
 
-gzip -9nf AUTHORS ChangeLog NEWS
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -93,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS
 %attr(755,root,root) %{_libdir}/lib*.??
 %{_includedir}/eel-2
 %{_pkgconfigdir}/*.pc
