@@ -2,28 +2,28 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.5.90
+Version:	2.5.91
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	4ada861b8b5338e99cfd0bc4329a1fa1
+# Source0-md5:	5c062fe133b6adb90d287d7a732bd2a4
 Patch0:		%{name}-locale-names.patch
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GConf2-devel >= 2.5.1
+BuildRequires:	GConf2-devel >= 2.5.90
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.5.5
+BuildRequires:	gail-devel >= 1.5.8
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.5.90
-BuildRequires:	gtk+2-devel >= 2:2.3.5
+BuildRequires:	gnome-vfs2-devel >= 2.5.91
+BuildRequires:	gtk+2-devel >= 2:2.3.6
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.8
 BuildRequires:	libglade2-devel >= 2.3.0
 BuildRequires:	libgnomeui-devel >= 2.5.90
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 2.5.0
+BuildRequires:	librsvg-devel >= 1:2.6.1
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.6.6
 BuildRequires:	perl-base
@@ -44,7 +44,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gail-devel >= 1.5.5
+Requires:	gail-devel >= 1.5.8
 Requires:	libgnomeui-devel >= 2.5.90
 
 %description devel
