@@ -2,34 +2,33 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.6.2
-Release:	2
+Version:	2.8.0
+Release:	1
 License:	GPL
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	a0350d241c01afc184d0e24521e4e3f9
-Patch0:		%{name}-locale-names.patch
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	e56ccd45700b46041968b78c951bbf81
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GConf2-devel >= 2.6.0
+BuildRequires:	GConf2-devel >= 2.7.92
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.6.1
-BuildRequires:	gtk+2-devel >= 2:2.4.2
+BuildRequires:	gnome-vfs2-devel >= 2.8.0
+BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.16
-BuildRequires:	libglade2-devel >= 1:2.3.6
-BuildRequires:	libgnomeui-devel >= 2.6.1.1
+BuildRequires:	libglade2-devel >= 1:2.4.0
+BuildRequires:	libgnomeui-devel >= 2.7.92
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 1:2.6.2
+BuildRequires:	librsvg-devel >= 1:2.8.1
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.6.6
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
-Requires:	libgnomeui >= 2.6.1.1
+Requires:	libgnomeui >= 2.7.92
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,7 +44,7 @@ Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.6.0
-Requires:	libgnomeui-devel >= 2.6.1.1
+Requires:	libgnomeui-devel >= 2.7.91
 
 %description devel
 This package provides the necessary development libraries and include
@@ -69,9 +68,6 @@ Biblioteki statyczne eel.
 
 %prep
 %setup -q
-%patch0 -p1
-
-mv po/{no,nb}.po
 
 %build
 %{__libtoolize}
@@ -90,6 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
+
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name} --with-gnome --all-name
 
