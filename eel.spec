@@ -24,10 +24,11 @@ BuildRequires:	gnome-vfs-devel >= 1.0
 BuildRequires:	gdk-pixbuf-devel >= 0.10.0
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1.0.0
-Requires:	freetype >= 2.0.1
+BuildRequires:	xml-i18n-tools
+BuildRequires:	freetype-devel >= 2.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _prefix		/usr
+%define _prefix		/usr/X11R6
 %define _sysconfdir	/etc
 
 %description
@@ -49,65 +50,50 @@ files to allow you to develop with Eel.
 %setup -q
 
 %build
+rm missing
+
+CFLAGS="$RPM_OPT_FLAGS"
+%configure2_13 $MYARCH_FLAGS \
+	--disable-gtktest \
+	--prefix=%{_prefix} \
+	--sysconfdir=%{_sysconfdir} \
 %ifarch alpha
-	MYARCH_FLAGS="--host=alpha-redhat-linux"
+	--host=alpha-pld-linux
 %endif
 
-LC_ALL=""
-LINGUAS=""
-LANG=""
-export LC_ALL LINGUAS LANG
-
-## Warning!  Make sure there are no spaces or tabs after the \ 
-## continuation character, or else the rpm demons will eat you.
-CFLAGS="$RPM_OPT_FLAGS"
-
-%configure $MYARCH_FLAGS \
-	--prefix=%{_prefix} \
-	--sysconfdir=%{_sysconfdir}
-
-make -k
-make check
 
 %install
 rm -rf $RPM_BUILD_ROOT
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
-%{__make} -k prefix=$RPM_BUILD_ROOT%{_prefix} sysconfdir=$RPM_BUILD_ROOT%{sysconfdir} install
+
+%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
 for FILE in "$RPM_BUILD_ROOT/bin/*"; do
 	file "$FILE" | grep -q not\ stripped && strip $FILE
 done
 
+gzip -9nf AUTHORS ChangeLog NEWS
+
 %clean
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %post
-if ! grep %{prefix}/lib /etc/ld.so.conf > /dev/null ; then
-	echo "%{prefix}/lib" >> /etc/ld.so.conf
-fi
 /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
-
-%defattr(0555, bin, bin)
-%doc AUTHORS COPYING COPYING.LIB ChangeLog NEWS README
-%{_libdir}/*.so*
-
-%defattr (0444, bin, bin)
+%attr(755,root,root) %{_libdir}/*.so*
 %{_datadir}/eel/fonts/urw/*.dir
 %{_datadir}/eel/fonts/urw/*.pfb
 %{_datadir}/eel/fonts/urw/*.afm
 %{_datadir}/eel/fonts/urw/*.pfm
+%doc *.gz
+
 
 %files devel
 %defattr(644,root,root,755)
-
-%defattr(0555, bin, bin)
+%attr(755,root,root) %{_bindir}/eel-config
+%{_includedir}/eel/*.h
 %{_libdir}/*.la
 %{_libdir}/*.sh
-%attr(755,root,root) %{_bindir}/eel-config
-
-%defattr(0444, bin, bin)
-%{_includedir}/eel/*.h
