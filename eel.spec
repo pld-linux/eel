@@ -16,7 +16,7 @@ BuildRequires:	intltool >= 0.22
 BuildRequires:	libgnome-devel >= 2.0.2
 BuildRequires:	libgnomeui-devel >= 2.0.3
 BuildRequires:	libgnomecanvas-devel >= 2.0.2
-BuildRequires:	libpng-devel >= 1.2.3
+BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 2.0.1
 BuildRequires:	libxml2-devel >= 2.4.23
 BuildRequires:	gettext-devel
