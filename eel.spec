@@ -2,16 +2,16 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.3.7
-Release:	2
+Version:	2.3.8
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	3cb2d71e5467a237339160a0b06f7e8f
+# Source0-md5:	46888c947ceb9aca990e2d316a4b58b4
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.3
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.3.3
+BuildRequires:	gail-devel >= 1.3.5
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-vfs2-devel >= 2.3.4
 BuildRequires:	gtk+2-devel >= 2.2.2
@@ -37,7 +37,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	gail-devel >= 1.2.0
+Requires:	gail-devel >= 1.3.5
 
 %description devel
 This package provides the necessary development libraries and include
@@ -74,7 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	 DESTDIR=$RPM_BUILD_ROOT \
 	 pkgconfigdir=%{_pkgconfigdir}
-
 
 %find_lang %{name} --with-gnome --all-name
 
