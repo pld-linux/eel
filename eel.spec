@@ -2,21 +2,21 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.9.90
+Version:	2.9.91
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	58b0e5f7fd9659bd91e663b187ebaffd
+# Source0-md5:	44082b0bea4763038fca2f09c76b73a4
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GConf2-devel >= 2.9.2
+BuildRequires:	GConf2-devel >= 2.9.90
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 2.9.90
-Buildrequires:	gnome-menus-devel
+BuildRequires:	gnome-desktop-devel >= 2.9.91
+Buildrequires:	gnome-menus-devel >= 2.9.90
 BuildRequires:	gnome-vfs2-devel >= 2.9.90
 BuildRequires:	gtk+2-devel >= 2:2.6.2
 BuildRequires:	intltool >= 0.29
