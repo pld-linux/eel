@@ -9,7 +9,7 @@ Source0:	ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/%{name}/%{name}-%{vers
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 1.2.1
 BuildRequires:	freetype-devel >= 2.0.9
-BuildRequires:	gail-devel >= 0.16
+BuildRequires:	gail-devel >= 0.17
 BuildRequires:	gnome-vfs2-devel >= 2.0.2
 BuildRequires:	gtk+2-devel >= 2.0.6
 BuildRequires:	intltool >= 0.22
