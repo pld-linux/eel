@@ -94,6 +94,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
+mkdir $RPM_BUILD_ROOT%{_includedir}/eel
+cp $RPM_BUILD_ROOT%{_includedir}/eel-1/eel/*.h $RPM_BUILD_ROOT%{_includedir}/eel/
+rm -rf $RPM_BUILD_ROOT%{_includedir}/eel-1
+
 gzip -9nf AUTHORS ChangeLog NEWS
 
 %find_lang %{name}
