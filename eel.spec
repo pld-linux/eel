@@ -12,7 +12,7 @@ Patch0:		%{name}-locale-names.patch
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	GConf2-devel >= 2.5.90
+BuildRequires:	GConf2-devel >= 2.6.0
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
@@ -20,7 +20,7 @@ BuildRequires:	gnome-vfs2-devel >= 2.6.1
 BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.16
-BuildRequires:	libglade2-devel >= 2.3.6
+BuildRequires:	libglade2-devel >= 1:2.3.6
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1:2.6.2
