@@ -1,12 +1,12 @@
-diff -urN eel-2.6.0.orig/configure.in eel-2.6.0/configure.in
---- eel-2.6.0.orig/configure.in	2004-03-22 19:21:43.985543120 +0100
-+++ eel-2.6.0/configure.in	2004-03-22 19:22:00.330058376 +0100
+diff -urN eel-2.6.1.orig/configure.in eel-2.6.1/configure.in
+--- eel-2.6.1.orig/configure.in	2004-04-19 13:21:54.151596504 +0200
++++ eel-2.6.1/configure.in	2004-04-19 13:22:08.581402840 +0200
 @@ -139,7 +139,7 @@
  
  dnl ===========================================================================
  
--ALL_LINGUAS="am ar az be bg bn br bs ca cs cy da de el en_CA en_GB es et eu fa fi fr ga gl he hi hr hu id is it ja kn ko li lt lv mk ml mn mr ms ne nl nn no pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv ta th tr uk vi wa zh_CN zh_TW"
-+ALL_LINGUAS="am ar az be bg bn br bs ca cs cy da de el en_CA en_GB es et eu fa fi fr ga gl he hi hr hu id is it ja kn ko li lt lv mk ml mn mr ms nb ne nl nn pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv ta th tr uk vi wa zh_CN zh_TW"
+-ALL_LINGUAS="am ar az be bg bn br bs ca cs cy da de el en_CA en_GB es et eu fa fi fr ga gl gu he hi hr hu id is it ja kn ko li lt lv mk ml mn mr ms ne nl nn no pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv ta th tr uk vi wa zh_CN zh_TW"
++ALL_LINGUAS="am ar az be bg bn br bs ca cs cy da de el en_CA en_GB es et eu fa fi fr ga gl gu he hi hr hu id is it ja kn ko li lt lv mk ml mn mr ms nb ne nl nn pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv ta th tr uk vi wa zh_CN zh_TW"
  
  GETTEXT_PACKAGE=eel-2.0
  AC_SUBST(GETTEXT_PACKAGE)
