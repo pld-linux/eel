@@ -23,6 +23,7 @@ BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1.0.0
 BuildRequires:	oaf-devel >= 0.6.5
 BuildRequires:	xml-i18n-tools
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
