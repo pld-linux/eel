@@ -2,22 +2,22 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.3.9
+Version:	2.3.90
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	6f42b229fba9f86a888da3c8a72e518e
+# Source0-md5:	feb0ab385fb4b4414349f48bb8951f33
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.3
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.3.6
+BuildRequires:	gail-devel >= 1.4.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-vfs2-devel >= 2.3.7
-BuildRequires:	gtk+2-devel >= 2.2.2
+BuildRequires:	gtk+2-devel >= 2.2.3
 BuildRequires:	intltool >= 0.27.2
-BuildRequires:	libgnome-devel >= 2.3.7
-BuildRequires:	libgnomecanvas-devel >= 2.3.7
+BuildRequires:	libgnome-devel >= 2.4.0
+BuildRequires:	libgnomecanvas-devel >= 2.4.0
 BuildRequires:	libgnomeui-devel >= 2.3.7
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 2.3.1
@@ -37,7 +37,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	gail-devel >= 1.3.6
+Requires:	gail-devel >= 1.4.0
 
 %description devel
 This package provides the necessary development libraries and include
@@ -73,8 +73,8 @@ Biblioteki statyczne eel.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	 DESTDIR=$RPM_BUILD_ROOT \
-	 pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT \
+	pkgconfigdir=%{_pkgconfigdir}
 
 %find_lang %{name} --with-gnome --all-name
 
