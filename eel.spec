@@ -10,6 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.4/%{name}-%{version}.t
 # Source0-md5:	5ddfee20c3ad53ebbbb8c8e9517e8304
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.3
+BuildRequires:	automake
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.4.0
 BuildRequires:	gettext-devel
@@ -65,6 +66,7 @@ Biblioteki statyczne eel.
 %setup -q
 
 %build
+cp /usr/share/automake/config.sub .
 %configure \
 	--disable-gtktest \
 	--enable-static
