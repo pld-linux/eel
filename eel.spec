@@ -7,18 +7,9 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	freetype-devel >= 2.0.9
-BuildRequires:	gail-devel >= 0.17
-BuildRequires:	gnome-vfs2-devel >= 2.0.4
-BuildRequires:	gtk+2-devel >= 2.0.6
+BuildRequires:	gail-devel
 BuildRequires:	intltool >= 0.23
-BuildRequires:	libgnome-devel >= 2.0.5
-BuildRequires:	libgnomeui-devel >= 2.0.5
-BuildRequires:	libgnomecanvas-devel >= 2.0.4
-BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 2.0.1
-BuildRequires:	libxml2-devel >= 2.4.24
+BuildRequires:	libgnomeui-devel
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,6 +43,8 @@ Summary:	Static eel libraries
 Summary(pl):	Biblioteki statyczne eel
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
+Requires:	gail-devel
+Requires:	libgnomeui-devel
 
 %description static
 Static eel libraries.
@@ -92,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_includedir}/eel-2
 %{_pkgconfigdir}/*.pc
 
