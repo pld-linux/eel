@@ -1,8 +1,8 @@
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
-Version:	1.0.1
-Release:	5
+Version:	1.0.2
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Group(de):	X11/Libraries
