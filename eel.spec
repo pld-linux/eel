@@ -2,27 +2,27 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.3.3
+Version:	2.3.4
 Release:	1
 License:	GPL
 Group:		X11/Libraries
-# Source0-md5:	85dfc95470502512e7a96e2fa0466cb3
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	6ae606ecb5356ebdff58fb5eb1210c0a
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.3.2
 BuildRequires:	freetype-devel >= 2.1.3
 BuildRequires:	gail-devel >= 1.2.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.3.2
-BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	gnome-vfs2-devel >= 2.3.4
+BuildRequires:	gtk+2-devel >= 2.2.2
 BuildRequires:	intltool >= 0.25
-BuildRequires:	libgnome-devel >= 2.2.0
-BuildRequires:	libgnomecanvas-devel >= 2.2.0
-BuildRequires:	libgnomeui-devel >= 2.2.0
+BuildRequires:	libgnome-devel >= 2.3.3
+BuildRequires:	libgnomecanvas-devel >= 2.3.0
+BuildRequires:	libgnomeui-devel >= 2.3.3
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 2.2.0
-BuildRequires:	libxml2-devel >= 2.5.1
-Requires:	libgnomeui >= 2.2.0
+BuildRequires:	librsvg-devel >= 2.3.0
+BuildRequires:	libxml2-devel >= 2.5.7
+Requires:	libgnomeui >= 2.3.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
