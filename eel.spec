@@ -7,17 +7,17 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://ftp.gnome.org/pub/gnome/pre-gnome2/sources/%{name}/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel
-BuildRequires:	freetype-devel
-BuildRequires:	gail-devel
-BuildRequires:	gnome-vfs2-devel
-BuildRequires:	gtk+2-devel
-BuildRequires:	intltool
-BuildRequires:	libgnome-devel
-BuildRequires:	libgnomeui-devel
-BuildRequires:	libgnomecanvas-devel
+BuildRequires:	GConf2-devel >= 1.1.10
+BuildRequires:	freetype-devel >= 2.0.9
+BuildRequires:	gail-devel >= 0.13
+BuildRequires:	gnome-vfs2-devel >= 1.9.14
+BuildRequires:	gtk+2-devel >= 2.0.2
+BuildRequires:	intltool >= 0.18
+BuildRequires:	libgnome-devel >= 1.117.0
+BuildRequires:	libgnomeui-devel >= 1.117.0
+BuildRequires:	libgnomecanvas-devel >= 1.117.0
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel
+BuildRequires:	librsvg-devel >= 1.1.6
 BuildRequires:	libxml2-devel
 BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
