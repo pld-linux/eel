@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.7.3
+Version:	2.7.4
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	24f8424da28107c2b2f54e7eb1b2b263
+# Source0-md5:	7c9ce971f45a4da0acb15261329608c2
 Patch0:		%{name}-locale-names.patch
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
@@ -16,12 +16,12 @@ BuildRequires:	GConf2-devel >= 2.7.3
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-vfs2-devel >= 2.7.4
+BuildRequires:	gnome-vfs2-devel >= 2.7.91
 BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.16
 BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnomeui-devel >= 2.7.2
+BuildRequires:	libgnomeui-devel >= 2.7.91
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1:2.7.2
 BuildRequires:	libtool
@@ -45,7 +45,7 @@ Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.6.0
-Requires:	libgnomeui-devel >= 2.7.2
+Requires:	libgnomeui-devel >= 2.7.91
 
 %description devel
 This package provides the necessary development libraries and include
