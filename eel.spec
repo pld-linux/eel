@@ -1,26 +1,26 @@
 Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Name:		eel
-Version:	2.1.6
+Version:	2.1.91
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.1/%{name}-%{version}.tar.bz2
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 1.2.1
-BuildRequires:	freetype-devel >= 2.0.9
-BuildRequires:	gail-devel >= 0.17
-BuildRequires:	gnome-vfs2-devel >= 2.1.5
-BuildRequires:	gtk+2-devel >= 2.0.6
-BuildRequires:	intltool >= 0.22
-BuildRequires:	libgnome-devel >= 2.1.1
-BuildRequires:	libgnomeui-devel >= 2.1.2
-BuildRequires:	libgnomecanvas-devel >= 2.0.4
+BuildRequires:	GConf2-devel >= 2.1.90
+BuildRequires:	freetype-devel >= 2.1.3
+BuildRequires:	gail-devel >= 1.1.7
+BuildRequires:	gnome-vfs2-devel >= 2.1.91
+BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	intltool >= 0.25
+BuildRequires:	libgnome-devel >= 2.1.90
+BuildRequires:	libgnomeui-devel >= 2.1.90
+BuildRequires:	libgnomecanvas-devel >= 2.1.90
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 2.1.0
-BuildRequires:	libxml2-devel >= 2.4.24
+BuildRequires:	librsvg-devel >= 2.1.5
+BuildRequires:	libxml2-devel >= 2.5.1
 BuildRequires:	gettext-devel
-Requires:	libgnomeui >= 2.1.1-3
+Requires:	libgnomeui >= 2.1.90
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
