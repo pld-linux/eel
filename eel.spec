@@ -31,6 +31,7 @@ BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	rpmbuild(macros) >= 1.197
+Requires(post,postun):	/sbin/ldconfig
 Requires:	gnome-vfs2 >= 2.10.0
 Requires:	libgnomeui >= 2.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
