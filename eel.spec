@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
 Version:	2.11.91
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.11/%{name}-%{version}.tar.bz2
@@ -18,11 +18,11 @@ BuildRequires:	gettext-devel
 BuildRequires:	gnome-desktop-devel >= 2.10.0
 BuildRequires:	gnome-menus-devel >= 2.11.1
 BuildRequires:	gnome-vfs2-devel >= 2.10.0
-BuildRequires:	gtk+2-devel >= 2:2.6.2
+BuildRequires:	gtk+2-devel >= 2:2.8.0
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.17
 BuildRequires:	libglade2-devel >= 1:2.5.0
-BuildRequires:	libgnomeui-devel >= 2.10.0
+BuildRequires:	libgnomeui-devel >= 2.11.2-2
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1:2.9.5
 BuildRequires:	libtool
@@ -32,7 +32,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	rpmbuild(macros) >= 1.197
 Requires:	gnome-vfs2 >= 2.10.0
-Requires:	libgnomeui >= 2.10.0
+Requires:	libgnomeui >= 2.11.2-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,7 +51,7 @@ Requires:	gail-devel >= 1.8.2
 Requires:	gnome-desktop-devel >= 2.10.0
 Requires:	gnome-menus-devel >= 2.11.1
 Requires:	gnome-vfs2-devel >= 2.10.0
-Requires:	libgnomeui-devel >= 2.10.0
+Requires:	libgnomeui-devel >= 2.11.2-2
 
 %description devel
 This package provides the necessary development libraries and include
