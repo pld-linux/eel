@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.12.0
+Version:	2.12.1
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	c0c9dcfcaffa074bd75c7500ed35aa08
+# Source0-md5:	08281630bef2e2f957ec2c349d73d112
 URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -15,9 +15,9 @@ BuildRequires:	GConf2-devel >= 2.12.0
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.8.5
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 2.12.0
+BuildRequires:	gnome-desktop-devel >= 2.12.1
 BuildRequires:	gnome-menus-devel >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.12.0
+BuildRequires:	gnome-vfs2-devel >= 2.12.1
 BuildRequires:	gtk+2-devel >= 2:2.8.3
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.17
@@ -31,7 +31,7 @@ BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	rpmbuild(macros) >= 1.197
-Requires:	gnome-vfs2 >= 2.12.0
+Requires:	gnome-vfs2 >= 2.12.1
 Requires:	libgnomeui >= 2.12.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
