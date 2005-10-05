@@ -12,6 +12,7 @@ URL:		http://nautilus.eazel.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	GConf2-devel >= 2.12.0
+BuildRequires:	fam-devel
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRequires:	gail-devel >= 1.8.5
 BuildRequires:	gettext-devel
