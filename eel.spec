@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka rozszerzeÒ Eazel
 Summary(ko):	Eazel »Æ¿Â ∂Û¿Ã∫Í∑Ø∏Æ
 Name:		eel
 Version:	2.14.0
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.14/%{name}-%{version}.tar.bz2
