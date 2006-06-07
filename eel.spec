@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
 Version:	2.14.1
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.14/%{name}-%{version}.tar.bz2
@@ -14,25 +14,25 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	fam-devel
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.8.5
+BuildRequires:	gail-devel >= 1.8.11
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 2.12.1
-BuildRequires:	gnome-menus-devel >= 2.12.0
-BuildRequires:	gnome-vfs2-devel >= 2.12.1
-BuildRequires:	gtk+2-devel >= 2:2.8.3
+BuildRequires:	gnome-desktop-devel >= 2.15.2
+BuildRequires:	gnome-menus-devel >= 2.14.0
+BuildRequires:	gnome-vfs2-devel >= 2.15.1
+BuildRequires:	gtk+2-devel >= 2:2.9.2
 BuildRequires:	intltool >= 0.29
 BuildRequires:	libart_lgpl-devel >= 2.3.17
 BuildRequires:	libglade2-devel >= 1:2.5.0
-BuildRequires:	libgnomeui-devel >= 2.12.0
+BuildRequires:	libgnomeui-devel >= 2.15.1
 BuildRequires:	libpng-devel
-BuildRequires:	librsvg-devel >= 1:2.9.5
+BuildRequires:	librsvg-devel >= 1:2.15.0
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.6.21
+BuildRequires:	libxml2-devel >= 2.6.26
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
 BuildRequires:	rpmbuild(macros) >= 1.197
-Requires:	libgnomeui >= 2.12.0
+Requires:	libgnomeui >= 2.15.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,11 +47,11 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gail-devel >= 1.8.5
-Requires:	gnome-desktop-devel >= 2.12.0
-Requires:	gnome-menus-devel >= 2.12.0
-Requires:	gnome-vfs2-devel >= 2.12.0
-Requires:	libgnomeui-devel >= 2.12.0
+Requires:	gail-devel >= 1.8.11
+Requires:	gnome-desktop-devel >= 2.15.2
+Requires:	gnome-menus-devel >= 2.14.0
+Requires:	gnome-vfs2-devel >= 2.15.1
+Requires:	libgnomeui-devel >= 2.15.1
 
 %description devel
 This package provides the necessary development libraries and include
@@ -78,7 +78,8 @@ Biblioteki statyczne eel.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+# breaks Makefile creation - temp. commented out
+#%%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
@@ -93,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/{no,ug}
 
 %find_lang %{name} --with-gnome --all-name
 
