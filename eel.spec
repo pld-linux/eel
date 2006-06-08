@@ -78,8 +78,11 @@ Biblioteki statyczne eel.
 
 %build
 %{__libtoolize}
+# fix me!
 # breaks Makefile creation - temp. commented out
-#%%{__aclocal}
+# caused by multi line LINGUAS definition
+# see gucharmap-configure.patch for details
+#%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
