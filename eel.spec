@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.14.1
-Release:	2
+Version:	2.15.1
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.14/%{name}-%{version}.tar.bz2
-# Source0-md5:	7002f4f99317ed11da8b9db15b7e4a2b
+Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.15/%{name}-%{version}.tar.bz2
+# Source0-md5:	b99df9fb1ebfe1cd0e66cb32296ea041
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.12.0
 BuildRequires:	autoconf
@@ -78,11 +78,7 @@ Biblioteki statyczne eel.
 
 %build
 %{__libtoolize}
-# fix me!
-# breaks Makefile creation - temp. commented out
-# caused by multi line LINGUAS definition
-# see gucharmap-configure.patch for details
-#%{__aclocal}
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure \
@@ -97,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/{no,ug}
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/ug
 
 %find_lang %{name} --with-gnome --all-name
 
