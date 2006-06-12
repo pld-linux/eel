@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.15.1
+Version:	2.15.2
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	b99df9fb1ebfe1cd0e66cb32296ea041
+# Source0-md5:	84a66b6633b18d8d7ed884847db55d67
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.12.0
 BuildRequires:	autoconf
@@ -20,14 +20,14 @@ BuildRequires:	gnome-desktop-devel >= 2.15.2
 BuildRequires:	gnome-menus-devel >= 2.14.0
 BuildRequires:	gnome-vfs2-devel >= 2.15.1
 BuildRequires:	gtk+2-devel >= 2:2.9.2
-BuildRequires:	intltool >= 0.29
+BuildRequires:	intltool >= 0.35
 BuildRequires:	libart_lgpl-devel >= 2.3.17
-BuildRequires:	libglade2-devel >= 1:2.5.0
+BuildRequires:	libglade2-devel >= 1:2.5.1
 BuildRequires:	libgnomeui-devel >= 2.15.1
 BuildRequires:	libpng-devel
 BuildRequires:	librsvg-devel >= 1:2.15.0
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.6.26
+BuildRequires:	libxml2-devel >= 1:2.6.26
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	popt-devel >= 1.5
