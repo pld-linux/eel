@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
 Version:	2.15.4
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.15/%{name}-%{version}.tar.bz2
@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	fam-devel
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.8.11
+BuildRequires:	gail-devel >= 1.9.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-desktop-devel >= 2.15.4
 BuildRequires:	gnome-menus-devel >= 2.15.4.1
@@ -46,7 +46,7 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gail-devel >= 1.8.11
+Requires:	gail-devel >= 1.9.0
 Requires:	gnome-desktop-devel >= 2.15.4
 Requires:	gnome-menus-devel >= 2.15.4.1
 Requires:	gnome-vfs2-devel >= 2.15.3
