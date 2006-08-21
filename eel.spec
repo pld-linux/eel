@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.15.91
+Version:	2.15.92
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	b025e631dece16e84ff3698ca207d49f
+# Source0-md5:	171dbe892b44d972f6e11ff0a472b3c4
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.12.0
 BuildRequires:	autoconf
@@ -18,8 +18,8 @@ BuildRequires:	gail-devel >= 1.9.1
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-desktop-devel >= 2.15.91
 BuildRequires:	gnome-menus-devel >= 2.15.91
-BuildRequires:	gnome-vfs2-devel >= 2.15.91
-BuildRequires:	gtk+2-devel >= 2:2.10.1
+BuildRequires:	gnome-vfs2-devel >= 2.15.92
+BuildRequires:	gtk+2-devel >= 2:2.10.2
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libart_lgpl-devel >= 2.3.17
 BuildRequires:	libglade2-devel >= 1:2.6.0
@@ -49,7 +49,7 @@ Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.9.1
 Requires:	gnome-desktop-devel >= 2.15.91
 Requires:	gnome-menus-devel >= 2.15.91
-Requires:	gnome-vfs2-devel >= 2.15.91
+Requires:	gnome-vfs2-devel >= 2.15.92
 Requires:	libgnomeui-devel >= 2.15.91
 
 %description devel
