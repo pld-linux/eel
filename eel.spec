@@ -2,36 +2,36 @@ Summary:	Eazel Extensions Library
 Summary(pl):	Biblioteka rozszerzeñ Eazel
 Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
 Name:		eel
-Version:	2.15.92
+Version:	2.16.0
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	171dbe892b44d972f6e11ff0a472b3c4
+Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.16/%{name}-%{version}.tar.bz2
+# Source0-md5:	7403a91bd27979f7513b9e9325e1d890
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 2.12.0
+BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	fam-devel
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	gail-devel >= 1.9.1
+BuildRequires:	gail-devel >= 1.9.2
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 2.15.91
+BuildRequires:	gnome-desktop-devel >= 2.15.92
 BuildRequires:	gnome-menus-devel >= 2.15.91
-BuildRequires:	gnome-vfs2-devel >= 2.15.92
+BuildRequires:	gnome-vfs2-devel >= 2.16.0
 BuildRequires:	gtk+2-devel >= 2:2.10.2
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libart_lgpl-devel >= 2.3.17
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeui-devel >= 2.15.91
+BuildRequires:	libgnomeui-devel >= 2.16.0
 BuildRequires:	libpng-devel >= 1.2.12
-BuildRequires:	librsvg-devel >= 1:2.15.90
+BuildRequires:	librsvg-devel >= 1:2.16.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.26
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
-Requires:	libgnomeui >= 2.15.91
+Requires:	libgnomeui >= 2.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,11 +46,11 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gail-devel >= 1.9.1
-Requires:	gnome-desktop-devel >= 2.15.91
+Requires:	gail-devel >= 1.9.2
+Requires:	gnome-desktop-devel >= 2.15.92
 Requires:	gnome-menus-devel >= 2.15.91
-Requires:	gnome-vfs2-devel >= 2.15.92
-Requires:	libgnomeui-devel >= 2.15.91
+Requires:	gnome-vfs2-devel >= 2.16.0
+Requires:	libgnomeui-devel >= 2.16.0
 
 %description devel
 This package provides the necessary development libraries and include
