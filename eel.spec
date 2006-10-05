@@ -92,8 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/ug
-
 %find_lang %{name} --with-gnome --all-name
 
 %clean
