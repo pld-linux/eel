@@ -1,6 +1,6 @@
 Summary:	Eazel Extensions Library
-Summary(pl.UTF-8):   Biblioteka rozszerzeń Eazel
-Summary(ko.UTF-8):   Eazel 확장 라이브러리
+Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
+Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Name:		eel
 Version:	2.16.3
 Release:	1
@@ -43,7 +43,7 @@ Biblioteka rozszerzeń Eazel.
 
 %package devel
 Summary:	Libraries and include files for developing with Eel
-Summary(pl.UTF-8):   Biblioteki i nagłówki potrzebne do programowania z użyciem Eel
+Summary(pl.UTF-8):	Biblioteki i nagłówki potrzebne do programowania z użyciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.9.3
@@ -62,7 +62,7 @@ tworzenia oprogramowania z wykorzystaniem Eel.
 
 %package static
 Summary:	Static eel libraries
-Summary(pl.UTF-8):   Biblioteki statyczne eel
+Summary(pl.UTF-8):	Biblioteki statyczne eel
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
