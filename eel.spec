@@ -1,6 +1,6 @@
 Summary:	Eazel Extensions Library
-Summary(pl):	Biblioteka rozszerzeñ Eazel
-Summary(ko):	Eazel È®Àå ¶óÀÌºê·¯¸®
+Summary(pl.UTF-8):   Biblioteka rozszerzeÅ„ Eazel
+Summary(ko.UTF-8):   Eazel í™•ìž¥ ë¼ì´ë¸ŒëŸ¬ë¦¬
 Name:		eel
 Version:	2.16.3
 Release:	1
@@ -38,12 +38,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Eazel Extensions Library is a collection of widgets and extensions to
 many modules of the GNOME platform.
 
-%description -l pl
-Biblioteka rozszerzeñ Eazel.
+%description -l pl.UTF-8
+Biblioteka rozszerzeÅ„ Eazel.
 
 %package devel
 Summary:	Libraries and include files for developing with Eel
-Summary(pl):	Biblioteki i nag³ówki potrzebne do programowania z u¿yciem Eel
+Summary(pl.UTF-8):   Biblioteki i nagÅ‚Ã³wki potrzebne do programowania z uÅ¼yciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gail-devel >= 1.9.3
@@ -56,20 +56,20 @@ Requires:	libgnomeui-devel >= 2.16.1
 This package provides the necessary development libraries and include
 files to allow you to develop with Eel.
 
-%description devel -l pl
-Ten pakiet zawiera biblioteki oraz pliki nag³ówkowe niezbêdne do
+%description devel -l pl.UTF-8
+Ten pakiet zawiera biblioteki oraz pliki nagÅ‚Ã³wkowe niezbÄ™dne do
 tworzenia oprogramowania z wykorzystaniem Eel.
 
 %package static
 Summary:	Static eel libraries
-Summary(pl):	Biblioteki statyczne eel
+Summary(pl.UTF-8):   Biblioteki statyczne eel
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static eel libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne eel.
 
 %prep
