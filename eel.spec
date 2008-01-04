@@ -6,29 +6,27 @@ Version:	2.21.1
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/eel/2.21/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.21/%{name}-%{version}.tar.bz2
 # Source0-md5:	fa6f28b185f689533957d4649cb6acc3
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 2.18.0.1
+BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gail-devel >= 1.18.0
+BuildRequires:	gail-devel >= 1.20.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 2.15.0
-BuildRequires:	gnome-desktop-devel >= 2.21.3
-BuildRequires:	gnome-menus-devel >= 2.20.0
-BuildRequires:	gnome-vfs2-devel >= 2.20.0
+BuildRequires:	glib2-devel >= 1:2.15.0
+BuildRequires:	gnome-desktop-devel >= 2.21.4
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	intltool >= 0.35.5
-BuildRequires:	libart_lgpl-devel >= 2.3.19
-BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeui-devel >= 2.18.1
+BuildRequires:	libglade2-devel >= 1:2.6.2
+BuildRequires:	libgnomeui-devel >= 2.20.1
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 1:2.6.28
+BuildRequires:	libxml2-devel >= 1:2.6.30
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
-Requires:	libgnomeui >= 2.18.1
+BuildRequires:	startup-notification-devel >= 0.8
+Requires:	libgnomeui >= 2.20.1
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,11 +43,14 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl.UTF-8):	Biblioteki i nagłówki potrzebne do programowania z użyciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gail-devel >= 1.18.0
-Requires:	gnome-desktop-devel >= 2.20.0
-Requires:	gnome-menus-devel >= 2.20.0
+Requires:	GConf2-devel >= 2.20.0
+Requires:	gail-devel >= 1.20.0
+Requires:	glib2-devel >= 1:2.15.0
+Requires:	gnome-desktop-devel >= 2.21.4
 Requires:	gnome-vfs2-devel >= 2.20.0
-Requires:	libgnomeui-devel >= 2.18.1
+Requires:	gtk+2-devel >= 2:2.12.0
+Requires:	libgnomeui-devel >= 2.20.1
+Requires:	libxml2-devel >= 1:2.6.30
 
 %description devel
 This package provides the necessary development libraries and include
@@ -60,16 +61,16 @@ Ten pakiet zawiera biblioteki oraz pliki nagłówkowe niezbędne do
 tworzenia oprogramowania z wykorzystaniem Eel.
 
 %package static
-Summary:	Static eel libraries
-Summary(pl.UTF-8):	Biblioteki statyczne eel
+Summary:	Static Eel libraries
+Summary(pl.UTF-8):	Biblioteki statyczne Eel
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static eel libraries.
+Static Eel libraries.
 
 %description static -l pl.UTF-8
-Biblioteki statyczne eel.
+Biblioteki statyczne Eel.
 
 %prep
 %setup -q
@@ -80,6 +81,7 @@ Biblioteki statyczne eel.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure \
 	--disable-gtktest \
@@ -106,15 +108,15 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libeel-2.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libeel-2.so
+%{_libdir}/libeel-2.la
 %{_includedir}/eel-2
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/eel-2.0.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libeel-2.a
