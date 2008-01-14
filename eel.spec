@@ -2,19 +2,19 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.21.1
+Version:	2.21.5
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.21/%{name}-%{version}.tar.bz2
-# Source0-md5:	fa6f28b185f689533957d4649cb6acc3
+# Source0-md5:	8b9184c593ca98909282c58ba8fff1d6
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gail-devel >= 1.20.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.15.0
+BuildRequires:	glib2-devel >= 1:2.15.2
 BuildRequires:	gnome-desktop-devel >= 2.21.4
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	intltool >= 0.35.5
@@ -45,7 +45,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.20.0
 Requires:	gail-devel >= 1.20.0
-Requires:	glib2-devel >= 1:2.15.0
+Requires:	glib2-devel >= 1:2.15.2
 Requires:	gnome-desktop-devel >= 2.21.4
 Requires:	gnome-vfs2-devel >= 2.20.0
 Requires:	gtk+2-devel >= 2:2.12.0
@@ -109,6 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS TODO
 %attr(755,root,root) %{_libdir}/libeel-2.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libeel-2.so.2
 
 %files devel
 %defattr(644,root,root,755)
