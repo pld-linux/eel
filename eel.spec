@@ -2,31 +2,31 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.21.5
+Version:	2.21.90
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.21/%{name}-%{version}.tar.bz2
-# Source0-md5:	8b9184c593ca98909282c58ba8fff1d6
+# Source0-md5:	3c0db2c022ee1370e180c9c4726ffaf0
 URL:		http://nautilus.eazel.com/
-BuildRequires:	GConf2-devel >= 2.20.0
+BuildRequires:	GConf2-devel >= 2.21.90
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gail-devel >= 1.20.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.15.2
-BuildRequires:	gnome-desktop-devel >= 2.21.4
-BuildRequires:	gtk+2-devel >= 2:2.12.0
-BuildRequires:	intltool >= 0.35.5
+BuildRequires:	glib2-devel >= 1:2.15.4
+BuildRequires:	gnome-desktop-devel >= 2.21.90
+BuildRequires:	gtk+2-devel >= 2:2.12.5
+BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
-BuildRequires:	libgnomeui-devel >= 2.20.1
+BuildRequires:	libgnomeui-devel >= 2.21.90
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 1:2.6.30
+BuildRequires:	libxml2-devel >= 1:2.6.31
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	startup-notification-devel >= 0.8
-Requires:	libgnomeui >= 2.20.1
+Requires:	libgnomeui >= 2.21.90
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,14 +43,14 @@ Summary:	Libraries and include files for developing with Eel
 Summary(pl.UTF-8):	Biblioteki i nagłówki potrzebne do programowania z użyciem Eel
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	GConf2-devel >= 2.20.0
+Requires:	GConf2-devel >= 2.21.90
 Requires:	gail-devel >= 1.20.0
-Requires:	glib2-devel >= 1:2.15.2
-Requires:	gnome-desktop-devel >= 2.21.4
+Requires:	glib2-devel >= 1:2.15.4
+Requires:	gnome-desktop-devel >= 2.21.90
 Requires:	gnome-vfs2-devel >= 2.20.0
-Requires:	gtk+2-devel >= 2:2.12.0
-Requires:	libgnomeui-devel >= 2.20.1
-Requires:	libxml2-devel >= 1:2.6.30
+Requires:	gtk+2-devel >= 2:2.12.5
+Requires:	libgnomeui-devel >= 2.21.90
+Requires:	libxml2-devel >= 1:2.6.31
 
 %description devel
 This package provides the necessary development libraries and include
