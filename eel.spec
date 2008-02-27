@@ -2,20 +2,20 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.21.91
+Version:	2.21.92
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.21/%{name}-%{version}.tar.bz2
-# Source0-md5:	5b7868a268101563618bf801f92bc9d8
+# Source0-md5:	0c0e2610c26e02b35456605ca24b91d3
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.21.90
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gail-devel >= 1.20.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.15.4
-BuildRequires:	gnome-desktop-devel >= 2.21.90
+BuildRequires:	glib2-devel >= 1:2.15.6
+BuildRequires:	gnome-desktop-devel >= 2.21.91
 BuildRequires:	gtk+2-devel >= 2:2.12.5
 BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
@@ -45,9 +45,8 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.21.90
 Requires:	gail-devel >= 1.20.0
-Requires:	glib2-devel >= 1:2.15.4
-Requires:	gnome-desktop-devel >= 2.21.90
-Requires:	gnome-vfs2-devel >= 2.20.0
+Requires:	glib2-devel >= 1:2.15.6
+Requires:	gnome-desktop-devel >= 2.21.91
 Requires:	gtk+2-devel >= 2:2.12.5
 Requires:	libgnomeui-devel >= 2.21.90
 Requires:	libxml2-devel >= 1:2.6.31
@@ -97,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 [ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
 	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
-%find_lang %{name} --with-gnome --all-name
+%find_lang eel-2.0
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -105,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f eel-2.0.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS TODO
 %attr(755,root,root) %{_libdir}/libeel-2.so.*.*.*
