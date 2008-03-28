@@ -2,21 +2,21 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.22.0
+Version:	2.22.1
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.22/%{name}-%{version}.tar.bz2
-# Source0-md5:	cd0db25194c154f07c39b45ca5943999
+# Source0-md5:	dd393ad7de2e230a7604af9560140920
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gail-devel >= 1.20.0
+BuildRequires:	gail-devel >= 1.22.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	glib2-devel >= 1:2.16.1
 BuildRequires:	gnome-desktop-devel >= 2.22.0
-BuildRequires:	gtk+2-devel >= 2:2.12.5
+BuildRequires:	gtk+2-devel >= 2:2.12.9
 BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libgnomeui-devel >= 2.22.0
@@ -44,10 +44,10 @@ Summary(pl.UTF-8):	Biblioteki i nagłówki potrzebne do programowania z użyciem
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.22.0
-Requires:	gail-devel >= 1.20.0
-Requires:	glib2-devel >= 1:2.16.0
+Requires:	gail-devel >= 1.22.0
+Requires:	glib2-devel >= 1:2.16.1
 Requires:	gnome-desktop-devel >= 2.22.0
-Requires:	gtk+2-devel >= 2:2.12.5
+Requires:	gtk+2-devel >= 2:2.12.9
 Requires:	libgnomeui-devel >= 2.22.0
 Requires:	libxml2-devel >= 1:2.6.31
 
