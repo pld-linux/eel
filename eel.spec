@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.23.1
+Version:	2.23.2
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.23/%{name}-%{version}.tar.bz2
-# Source0-md5:	4e2783e18a1980dbc055ca93305dad1a
+# Source0-md5:	cba0845cf5749872329ea1bd4ecaf5c7
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.22.0
 BuildRequires:	autoconf
@@ -19,6 +19,7 @@ BuildRequires:	gnome-desktop-devel >= 2.22.0
 BuildRequires:	gtk+2-devel >= 2:2.12.9
 BuildRequires:	intltool >= 0.37.0
 BuildRequires:	libglade2-devel >= 1:2.6.2
+BuildRequires:	libgnome-devel >= 2.23.3
 BuildRequires:	libgnomeui-devel >= 2.22.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.31
