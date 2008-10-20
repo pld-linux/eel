@@ -2,12 +2,12 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.24.0
+Version:	2.24.1
 Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	bafb0155dc6caf69cbbd3534f70f3a9d
+# Source0-md5:	b591df36af8f1b23dd175be33b5de073
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.24.0
 BuildRequires:	autoconf
