@@ -2,31 +2,25 @@ Summary:	Eazel Extensions Library
 Summary(ko.UTF-8):	Eazel 확장 라이브러리
 Summary(pl.UTF-8):	Biblioteka rozszerzeń Eazel
 Name:		eel
-Version:	2.24.1
-Release:	2
+Version:	2.26.0
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	b591df36af8f1b23dd175be33b5de073
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/eel/2.26/%{name}-%{version}.tar.bz2
+# Source0-md5:	dfa105ccabd53efe4166dcfac75e2393
 URL:		http://nautilus.eazel.com/
 BuildRequires:	GConf2-devel >= 2.24.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.18.0
-BuildRequires:	gnome-desktop-devel >= 2.24.0
+BuildRequires:	gnome-desktop-devel >= 2.26.0
 BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libglade2-devel >= 1:2.6.2
-BuildRequires:	libgnome-devel >= 2.24.0
-BuildRequires:	libgnomeui-devel >= 2.24.0
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 1:2.6.31
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.197
-BuildRequires:	startup-notification-devel >= 0.8
-Requires:	libgnomeui >= 2.24.0
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,10 +38,8 @@ Summary(pl.UTF-8):	Biblioteki i nagłówki potrzebne do programowania z użyciem
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.24.0
-Requires:	glib2-devel >= 1:2.18.0
-Requires:	gnome-desktop-devel >= 2.24.0
+Requires:	gnome-desktop-devel >= 2.26.0
 Requires:	gtk+2-devel >= 2:2.14.0
-Requires:	libgnomeui-devel >= 2.24.0
 Requires:	libxml2-devel >= 1:2.6.31
 
 %description devel
